@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.william.library.GradientTextView
+        android:id="@+id/gradientTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:text="@string/leftToRight_GradientTextView"
+        android:textSize="24sp"
+        app:direction="leftToRight"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:translateAnimate="true"
+        app:translateSpeed="slow" />
+
+    <com.william.library.GradientTextView
+        android:id="@+id/gradientTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/leftToRight_GradientTextView"
+        android:textSize="24sp"
+        app:direction="leftToRight"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gradientTextView1"
+        app:translateAnimate="true"
+        app:translateSpeed="normal" />
+
+    <com.william.library.GradientTextView
+        android:id="@+id/gradientTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/leftToRight_GradientTextView"
+        android:textSize="24sp"
+        app:direction="leftToRight"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gradientTextView2"
+        app:translateAnimate="true"
+        app:translateSpeed="fast" />
+
+    <com.william.library.GradientTextView
+        android:id="@+id/gradientTextView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/leftToRight_GradientTextView"
+        android:textSize="24sp"
+        app:direction="leftToRight"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gradientTextView3"
+        app:translateAnimate="false" />
+
+    <com.william.library.GradientTextView
+        android:id="@+id/gradientTextView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/topToBottom_GradientTextView"
+        android:textSize="24sp"
+        app:direction="topToBottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gradientTextView4"
+        app:translateAnimate="false" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
