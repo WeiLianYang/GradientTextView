@@ -7,7 +7,7 @@
 ![效果动图](image/resource.gif)
 
 
-#### 一、控件样式
+### 一、控件样式
 
 ```xml
 <declare-styleable name="GradientTextView">
@@ -26,7 +26,7 @@
     </declare-styleable>
 ```
 
-#### 二、属性介绍
+### 二、属性介绍
 
 | 属性              | 可选值                                    | 作用                            |
 |:-----------------|:-----------------------------------------|:-------------------------------|
@@ -36,7 +36,7 @@
 | translateAnimate | true or false                            | 渐变颜色的动画开关(默认值：false)   |
 | translateSpeed   | slow、normal、fast                       | 渐变颜色的动画速度(默认值：normal)   |
 
-#### 三、控件在布局中使用
+### 三、控件在布局中使用
 
 ```xml
 <com.william.library.GradientTextView
@@ -52,7 +52,7 @@
         app:translateSpeed="normal" />
 ```
 
-#### 四、在代码中控制动画开关
+### 四、在代码中控制动画开关
 
 ```kotlin
 gradientTextView.apply {
