@@ -25,12 +25,23 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id: Int = item.itemId
         if (id == R.id.action_translate) {
-            gradientTextView1.translateAnimate = !gradientTextView1.translateAnimate
-            gradientTextView1.invalidate()
-            gradientTextView2.translateAnimate = !gradientTextView2.translateAnimate
-            gradientTextView2.invalidate()
-            gradientTextView3.translateAnimate = !gradientTextView3.translateAnimate
-            gradientTextView3.invalidate()
+            gradientTextView1.apply {
+                translateAnimate = !translateAnimate
+                invalidate()
+            }
+            gradientTextView2.apply {
+                translateAnimate = !translateAnimate
+                invalidate()
+            }
+            gradientTextView3.apply {
+                translateAnimate = !translateAnimate
+                invalidate()
+            }
+
+            gradientTextView5.apply {
+                translateAnimate = !translateAnimate
+                invalidate()
+            }
             return true
         }
         return super.onOptionsItemSelected(item)

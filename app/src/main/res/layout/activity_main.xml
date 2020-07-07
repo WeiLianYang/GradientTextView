@@ -16,7 +16,7 @@
         android:id="@+id/gradientTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="80dp"
         android:text="@string/leftToRight_GradientTextView"
         android:textSize="24sp"
         app:direction="leftToRight"
