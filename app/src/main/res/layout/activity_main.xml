@@ -16,7 +16,7 @@
         android:id="@+id/gradientTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="200dp"
         android:text="@string/leftToRight_GradientTextView"
         android:textSize="24sp"
         app:direction="leftToRight"
@@ -78,6 +78,20 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gradientTextView4"
+        app:translateAnimate="true"
+        app:translateSpeed="slow" />
+
+    <com.william.library.GradientTextView
+        android:id="@+id/gradientTextView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/topToBottom_GradientTextView"
+        android:textSize="24sp"
+        app:direction="topToBottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gradientTextView5"
         app:translateAnimate="false" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

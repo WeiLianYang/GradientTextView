@@ -26,8 +26,11 @@ class MainActivity : AppCompatActivity() {
         val id: Int = item.itemId
         if (id == R.id.action_translate) {
             gradientTextView1.translateAnimate = !gradientTextView1.translateAnimate
+            gradientTextView1.invalidate()
             gradientTextView2.translateAnimate = !gradientTextView2.translateAnimate
+            gradientTextView2.invalidate()
             gradientTextView3.translateAnimate = !gradientTextView3.translateAnimate
+            gradientTextView3.invalidate()
             return true
         }
         return super.onOptionsItemSelected(item)

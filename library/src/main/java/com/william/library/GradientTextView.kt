@@ -25,10 +25,6 @@ class GradientTextView : AppCompatTextView {
     private var mTranslate = 0f
     private var mTranslateSpeed = 0
     var translateAnimate = false
-        set(value) {
-            field = value
-            invalidate()
-        }
 
     @ColorInt
     lateinit var colors: IntArray
