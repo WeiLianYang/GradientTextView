@@ -1,8 +1,8 @@
 # GradientTextView
 
-### 用于设置TexView的字体渐变颜色，和动画效果
+### 🔥🔥🔥用于设置TexView的字体 *渐变颜色* 和 *动画效果*
 
-### 效果预览
+### 效果预览：
 
 ![效果动图](image/resource.gif)
 
