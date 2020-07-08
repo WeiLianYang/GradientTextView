@@ -1,11 +1,11 @@
-# GradientTextView
+# GradientTextView [ ![Download](https://api.bintray.com/packages/williamyang/maven/gradienttext/images/download.svg?version=1.0.0) ](https://bintray.com/williamyang/maven/gradienttext/1.0.0/link)
 
-### 🔥🔥🔥用于设置TexView的字体 *渐变颜色*、*渐变方向* 和 *动画效果*[ ![Download](https://api.bintray.com/packages/williamyang/maven/gradienttext/images/download.svg?version=1.0.0) ](https://bintray.com/williamyang/maven/gradienttext/1.0.0/link)
+### 🔥🔥🔥用于设置TexView的字体 *渐变颜色*、*渐变方向* 和 *动画效果*
 
 ### 效果预览：
 
 ![效果动图](image/resource.gif)
-
+![效果静态图](image/screenshot.png)
 
 ### 一、控件样式
 
