@@ -1,6 +1,12 @@
-# GradientTextView [![Download](https://api.bintray.com/packages/williamyang/maven/gradienttext/images/download.svg?version=1.0.0)](https://bintray.com/williamyang/maven/gradienttext/1.0.0/link)
+# GradientTextView [![Download](https://api.bintray.com/packages/williamyang/maven/gradienttext/images/download.svg?version=1.0.1)](https://bintray.com/williamyang/maven/gradienttext/1.0.1/link)
 
 ### 🔥🔥🔥用于设置TexView的字体 *渐变颜色*、*渐变方向* 和 *动画效果*
+
+### 添加依赖
+
+```groovy
+implementation 'com.williamyang:gradienttext:1.0.1'
+```
 
 ### 效果预览：
 
