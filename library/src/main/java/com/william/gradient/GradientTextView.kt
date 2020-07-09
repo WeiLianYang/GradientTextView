@@ -52,18 +52,18 @@ class GradientTextView : AppCompatTextView {
         if (attrs != null) {
             val a = context.obtainStyledAttributes(attrs, R.styleable.GradientTextView)
             mStartColor = a.getColor(
-                R.styleable.GradientTextView_startColor,
+                R.styleable.GradientTextView_gradient_startColor,
                 resources.getColor(R.color.color_03DAC5)
             )
             mEndColor = a.getColor(
-                R.styleable.GradientTextView_endColor,
+                R.styleable.GradientTextView_gradient_endColor,
                 resources.getColor(R.color.color_6200EE)
             )
             translateAnimate =
-                a.getBoolean(R.styleable.GradientTextView_translateAnimate, false)
-            mTranslateSpeed = a.getInt(R.styleable.GradientTextView_translateSpeed, 10)
+                a.getBoolean(R.styleable.GradientTextView_gradient_animate, false)
+            mTranslateSpeed = a.getInt(R.styleable.GradientTextView_gradient_speed, 10)
 
-            mDirection = a.getInt(R.styleable.GradientTextView_direction, leftToRight)
+            mDirection = a.getInt(R.styleable.GradientTextView_gradient_direction, leftToRight)
 
             if (translateAnimate) {
                 colors = intArrayOf(mStartColor, mEndColor, mStartColor, mStartColor, mStartColor)

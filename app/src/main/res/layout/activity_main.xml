@@ -19,12 +19,12 @@
         android:layout_marginTop="80dp"
         android:text="@string/leftToRight_GradientTextView"
         android:textSize="24sp"
-        app:direction="leftToRight"
+        app:gradient_animate="true"
+        app:gradient_direction="leftToRight"
+        app:gradient_speed="slow"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:translateAnimate="true"
-        app:translateSpeed="slow" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.william.gradient.GradientTextView
         android:id="@+id/gradientTextView2"
@@ -33,12 +33,12 @@
         android:layout_marginTop="20dp"
         android:text="@string/leftToRight_GradientTextView"
         android:textSize="24sp"
-        app:direction="leftToRight"
+        app:gradient_animate="true"
+        app:gradient_direction="leftToRight"
+        app:gradient_speed="normal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gradientTextView1"
-        app:translateAnimate="true"
-        app:translateSpeed="normal" />
+        app:layout_constraintTop_toBottomOf="@+id/gradientTextView1" />
 
     <com.william.gradient.GradientTextView
         android:id="@+id/gradientTextView3"
@@ -47,12 +47,12 @@
         android:layout_marginTop="20dp"
         android:text="@string/leftToRight_GradientTextView"
         android:textSize="24sp"
-        app:direction="leftToRight"
+        app:gradient_animate="true"
+        app:gradient_direction="leftToRight"
+        app:gradient_speed="fast"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gradientTextView2"
-        app:translateAnimate="true"
-        app:translateSpeed="fast" />
+        app:layout_constraintTop_toBottomOf="@+id/gradientTextView2" />
 
     <com.william.gradient.GradientTextView
         android:id="@+id/gradientTextView4"
@@ -61,11 +61,11 @@
         android:layout_marginTop="20dp"
         android:text="@string/leftToRight_GradientTextView"
         android:textSize="24sp"
-        app:direction="leftToRight"
+        app:gradient_animate="false"
+        app:gradient_direction="leftToRight"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gradientTextView3"
-        app:translateAnimate="false" />
+        app:layout_constraintTop_toBottomOf="@+id/gradientTextView3" />
 
     <com.william.gradient.GradientTextView
         android:id="@+id/gradientTextView5"
@@ -74,12 +74,12 @@
         android:layout_marginTop="20dp"
         android:text="@string/topToBottom_GradientTextView"
         android:textSize="24sp"
-        app:direction="topToBottom"
+        app:gradient_animate="true"
+        app:gradient_direction="topToBottom"
+        app:gradient_speed="normal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gradientTextView4"
-        app:translateAnimate="true"
-        app:translateSpeed="slow" />
+        app:layout_constraintTop_toBottomOf="@+id/gradientTextView4" />
 
     <com.william.gradient.GradientTextView
         android:id="@+id/gradientTextView6"
@@ -88,10 +88,10 @@
         android:layout_marginTop="20dp"
         android:text="@string/topToBottom_GradientTextView"
         android:textSize="24sp"
-        app:direction="topToBottom"
+        app:gradient_animate="false"
+        app:gradient_direction="topToBottom"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gradientTextView5"
-        app:translateAnimate="false" />
+        app:layout_constraintTop_toBottomOf="@+id/gradientTextView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

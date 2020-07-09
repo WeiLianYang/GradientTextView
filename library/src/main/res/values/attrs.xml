@@ -2,14 +2,14 @@
 <resources>
 
     <declare-styleable name="GradientTextView">
-        <attr name="startColor" format="reference|color" />
-        <attr name="endColor" format="reference|color" />
-        <attr name="direction" format="enum">
+        <attr name="gradient_startColor" format="reference|color" />
+        <attr name="gradient_endColor" format="reference|color" />
+        <attr name="gradient_direction" format="enum">
             <enum name="leftToRight" value="1" />
             <enum name="topToBottom" value="2" />
         </attr>
-        <attr name="translateAnimate" format="boolean" />
-        <attr name="translateSpeed" format="enum">
+        <attr name="gradient_animate" format="boolean" />
+        <attr name="gradient_speed" format="enum">
             <enum name="slow" value="20" />
             <enum name="normal" value="10" />
             <enum name="fast" value="5" />
