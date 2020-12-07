@@ -10,7 +10,7 @@ implementation 'com.williamyang:gradienttext:1.0.1'
 
 ### 效果预览：
 
-![效果动图](image/resource.gif) ![效果静态图](image/screenshot.png)
+![效果动图](https://img-blog.csdnimg.cn/20200711210227216.gif) ![效果静态图](https://img-blog.csdnimg.cn/20200711210218233.png)
 
 ### 一、控件样式
 
