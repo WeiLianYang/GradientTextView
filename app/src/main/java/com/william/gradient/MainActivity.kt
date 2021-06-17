@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import com.william.gradient.databinding.ActivityMainBinding
 
 /**
  * @author William
@@ -12,9 +12,15 @@ import kotlinx.android.synthetic.main.activity_main.*
  * Class Comment：
  */
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -25,22 +31,24 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id: Int = item.itemId
         if (id == R.id.action_translate) {
-            gradientTextView1.apply {
-                translateAnimate = !translateAnimate
-                invalidate()
-            }
-            gradientTextView2.apply {
-                translateAnimate = !translateAnimate
-                invalidate()
-            }
-            gradientTextView3.apply {
-                translateAnimate = !translateAnimate
-                invalidate()
-            }
+            binding.apply {
+                gradientTextView1.apply {
+                    translateAnimate = !translateAnimate
+                    invalidate()
+                }
+                gradientTextView2.apply {
+                    translateAnimate = !translateAnimate
+                    invalidate()
+                }
+                gradientTextView3.apply {
+                    translateAnimate = !translateAnimate
+                    invalidate()
+                }
 
-            gradientTextView5.apply {
-                translateAnimate = !translateAnimate
-                invalidate()
+                gradientTextView5.apply {
+                    translateAnimate = !translateAnimate
+                    invalidate()
+                }
             }
             return true
         }
