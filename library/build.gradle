@@ -64,7 +64,7 @@ dependencies {
 }
 
 ext {
-    artifact = 'gradienttext'
+    artifactId = 'gradienttext'
     libraryName = 'GradientTextView'
     libraryDescription = 'Used to set the font gradient color, gradient direction, and animation effect of the TexView.'
 }
