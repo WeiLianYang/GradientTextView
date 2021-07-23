@@ -1,5 +1,9 @@
 # GradientTextView
 
+
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.weilianyang/gradienttext/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.weilianyang/gradienttext) [![API](https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=23) [![License](https://img.shields.io/badge/License%20-Apache%202-337ab7.svg)](https://github.com/WeiLianYang/AndroidToolkit/blob/main/LICENSE)
+
+
 ### 🔥🔥🔥用于设置TexView的字体 *渐变颜色*、*渐变方向* 和 *动画效果*
 
 ### 添加依赖
@@ -11,7 +15,7 @@ buildscript {
     }
 }
 
-implementation 'io.github.weilianyang:gradienttext:1.0.1'
+implementation 'io.github.weilianyang:gradienttext:1.0.2'
 ```
 
 ### 效果预览：
