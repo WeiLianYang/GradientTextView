@@ -15,7 +15,7 @@ buildscript {
     }
 }
 
-implementation 'io.github.weilianyang:gradienttext:1.0.2'
+implementation 'io.github.weilianyang:gradienttext:1.0.3'
 ```
 
 ### 效果预览：
@@ -51,7 +51,7 @@ implementation 'io.github.weilianyang:gradienttext:1.0.2'
 | gradient_animate    | true or false                            | 渐变颜色的动画开关(默认值：false)   |
 | gradient_speed      | slow、normal、fast                       | 渐变颜色的动画速度(默认值：normal)   |
 
-### 三、控件在布局中使用
+### 三、布局声明
 
 ```xml
 <com.william.gradient.GradientTextView
@@ -66,7 +66,32 @@ implementation 'io.github.weilianyang:gradienttext:1.0.2'
     app:gradient_speed="normal" />
 ```
 
-### 四、在代码中控制动画开关
+### 四、代码创建
+
+```kotlin
+GradientTextView(this).apply {
+    layoutParams =
+        ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_PARENT, 100)
+            .apply {
+                topToTop = ConstraintLayout.LayoutParams.PARENT_ID
+                topMargin = 100
+                leftMargin = 100
+            }
+    this.text = "text"
+    this.textSize = 18f
+
+    this.direction = GradientTextView.leftToRight
+    this.translateSpeed = GradientTextView.normal
+    this.translateAnimate = true
+
+    setColor(
+        ContextCompat.getColor(this@SecondActivity, R.color.color_03DAC5),
+        ContextCompat.getColor(this@SecondActivity, R.color.color_6200EE)
+    )
+}
+```
+
+### 五、控制动画开关
 
 ```kotlin
 gradientTextView.apply {
