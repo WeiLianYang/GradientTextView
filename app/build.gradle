@@ -64,6 +64,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-//    implementation project(path: ':library')
-    implementation 'io.github.weilianyang:gradienttext:1.0.2'
+    implementation project(path: ':library')
+//    implementation 'io.github.weilianyang:gradienttext:1.0.2'
 }

@@ -35,25 +35,24 @@ class GradientTextView : AppCompatTextView {
 
     private var mLinearGradient: LinearGradient? = null
     private var mGradientMatrix: Matrix = Matrix()
-    private var mStartColor = 0
-    private var mEndColor = 0
-    private var mDirection = 0
-    private var mTranslate = 0f
-    private var mTranslateSpeed = 0
-    var translateAnimate = false
 
     @ColorInt
-    lateinit var colors: IntArray
+    var startColor = 0
 
-    /**
-     * direction: from left to right
-     */
-    private val leftToRight = 1
+    @ColorInt
+    var endColor = 0
 
-    /**
-     * direction: from top to bottom
-     */
-    private val topToBottom = 2
+    @AnimateDirection
+    var direction = 0
+
+    @TranslateSpeed
+    var translateSpeed = 0
+
+    var translateAnimate = false
+
+    private var translate = 0f
+
+    var colors: IntArray = intArrayOf()
 
     constructor(context: Context) : this(context, null)
 
@@ -67,23 +66,22 @@ class GradientTextView : AppCompatTextView {
     ) {
         if (attrs != null) {
             val a = context.obtainStyledAttributes(attrs, R.styleable.GradientTextView)
-            mStartColor = a.getColor(
+            startColor = a.getColor(
                 R.styleable.GradientTextView_gradient_startColor,
                 resources.getColor(R.color.color_03DAC5)
             )
-            mEndColor = a.getColor(
+            endColor = a.getColor(
                 R.styleable.GradientTextView_gradient_endColor,
                 resources.getColor(R.color.color_6200EE)
             )
             translateAnimate =
                 a.getBoolean(R.styleable.GradientTextView_gradient_animate, false)
-            mTranslateSpeed = a.getInt(R.styleable.GradientTextView_gradient_speed, 10)
+            translateSpeed = a.getInt(R.styleable.GradientTextView_gradient_speed, normal)
 
-            mDirection = a.getInt(R.styleable.GradientTextView_gradient_direction, leftToRight)
+            direction = a.getInt(R.styleable.GradientTextView_gradient_direction, leftToRight)
 
-            if (translateAnimate) {
-                colors = intArrayOf(mStartColor, mEndColor, mStartColor, mStartColor, mStartColor)
-            }
+            initColors()
+
             a.recycle()
         }
     }
@@ -93,18 +91,18 @@ class GradientTextView : AppCompatTextView {
         super.onDraw(canvas)
 
         if (translateAnimate) {
-            if (mDirection == leftToRight) {
-                mTranslate += measuredWidth / mTranslateSpeed
-                if (mTranslate > measuredWidth) {
-                    mTranslate = 0f
+            if (direction == leftToRight) {
+                translate += measuredWidth / translateSpeed
+                if (translate > measuredWidth) {
+                    translate = 0f
                 }
-                mGradientMatrix.setTranslate(mTranslate, 0f)
+                mGradientMatrix.setTranslate(translate, 0f)
             } else {
-                mTranslate += measuredHeight / mTranslateSpeed
-                if (mTranslate > measuredHeight) {
-                    mTranslate = 0f
+                translate += measuredHeight / translateSpeed
+                if (translate > measuredHeight) {
+                    translate = 0f
                 }
-                mGradientMatrix.setTranslate(0f, mTranslate)
+                mGradientMatrix.setTranslate(0f, translate)
             }
             mLinearGradient?.setLocalMatrix(mGradientMatrix)
             postInvalidateDelayed(100)
@@ -120,7 +118,7 @@ class GradientTextView : AppCompatTextView {
         if (measuredWidth <= 0 || measuredHeight <= 0) {
             return
         }
-        when (mDirection) {
+        when (direction) {
             leftToRight ->
                 if (translateAnimate) {
                     mLinearGradient = LinearGradient(
@@ -138,8 +136,8 @@ class GradientTextView : AppCompatTextView {
                         0f,
                         measuredWidth.toFloat(),
                         0f,
-                        mStartColor,
-                        mEndColor,
+                        startColor,
+                        endColor,
                         Shader.TileMode.CLAMP
                     )
                 }
@@ -160,12 +158,56 @@ class GradientTextView : AppCompatTextView {
                         0f,
                         0f,
                         measuredHeight.toFloat(),
-                        mStartColor,
-                        mEndColor,
+                        startColor,
+                        endColor,
                         Shader.TileMode.CLAMP
                     )
                 }
         }
+    }
+
+    fun setColor(@ColorInt startColor: Int, @ColorInt endColor: Int) {
+        this.startColor = startColor
+        this.endColor = endColor
+        initColors()
+    }
+
+    fun initColors() {
+        if (translateAnimate) {
+            colors = intArrayOf(startColor, endColor, startColor, startColor, startColor)
+        }
+    }
+
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        translateAnimate = false
+    }
+
+    companion object {
+        /**
+         * direction: from left to right
+         */
+        const val leftToRight = 1
+
+        /**
+         * direction: from top to bottom
+         */
+        const val topToBottom = 2
+
+        /**
+         * translate speed slow
+         */
+        const val slow = 20
+
+        /**
+         * translate speed normal
+         */
+        const val normal = 10
+
+        /**
+         * translate speed fast
+         */
+        const val fast = 5
     }
 
 }
